@@ -26,7 +26,7 @@ int main()
                 if(now == b && k==2){
                     ans++;
                 }
-                for(int l= j+1; l<=b && k==3; l++){
+                for(int l= j+1; l<=n && k==3; l++){
                     now = arr[i] + arr[j] +arr[l];
                     if(now == b && k==3){
                         ans++;
