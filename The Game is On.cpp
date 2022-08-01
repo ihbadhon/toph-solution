@@ -6,7 +6,7 @@ using namespace std;
 //Driver code
 int main()
 {
-    int t;
+    int t;  //test cases
     cin >> t;
 
     while(t--)
@@ -15,7 +15,7 @@ int main()
         cin >> n;
         
         string str;
-        cin >> str;
+        cin >> str; // only include 0 or 1
 
         int cnt=0, weak_val = 0;
         
@@ -29,9 +29,9 @@ int main()
 
             if(str[i]=='1')
             {
-                if(weak_val%2==1)
+                if(weak_val%2==1) // check if the player is weak or not
                 {
-                    cnt++;
+                    cnt++;  // count how many player you can kill
                     weak_val=0;
                 }
             }
