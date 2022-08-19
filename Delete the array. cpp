@@ -1,0 +1,33 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+#define ll long long int
+
+//Driver code
+int main()
+{
+    int n, x;
+    cin >> n >> x;
+    set<int> st;
+    for(int i=1; i<=n; i++){
+        int c;
+        cin >> c;
+        st.insert(c);
+    }
+    int ans = 0;
+    while(st.size()>0){
+        ans++;
+        int mn = *st.begin();
+        mn = max(mn, x);
+        set<int> now;
+        for(int i:st){
+            if(i<=mn){
+                continue;
+            }
+            now.insert(i-mn);
+        }
+        st = now;
+    }
+    cout << ans << endl;
+    return 0;
+}
